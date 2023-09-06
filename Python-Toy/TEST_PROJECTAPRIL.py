@@ -1,8 +1,3 @@
-#Name: Kiryl Baravikou
-#Course: CS113
-#Date: 4/26/22
-#Project 7
-
 def build_dictionary(s):
     """The build(s) function takes one string 's' as input and returns a dictionary."""
     target = s
