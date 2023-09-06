@@ -1,10 +1,3 @@
-#Name: Kiryl Baravikou
-#Course: CS113
-#Date: 4/22/22
-#Lab Week 14: Basic Dictionary Practice: Contact list
-#Credit for partial help: Drishika (During the lab)
-
-
 def build(s):
     """The build(s) function takes one string 's' as input and returns a dictionary."""
     chain = dict()
