@@ -1,9 +1,3 @@
-#Name: Kiryl Baravikou
-#Course: CS113
-#Date: 4/11/22
-#Project 4
- 
- 
 import urllib.request as ur
 import re
 
