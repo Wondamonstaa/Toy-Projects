@@ -1,8 +1,3 @@
-#Name: Kiryl Baravikou
-#Course: CS113
-#Date: 4/15/22
-#Lab: Week 13: Network Analysis
-
 import pandas as pd
 import networkx as nx
 import numpy as nan
