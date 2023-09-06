@@ -1,9 +1,3 @@
-#Name: Kiryl Baravikou
-#Course: CS113
-#Date: 4/26/22
-#Project 7: 
-
-    
 #Write a function build_dictionary() 
 #that takes as input a list of of strings, 
 #ex. ['tomato', 'cucumber', 'celery'], 
