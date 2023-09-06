@@ -1,5 +1,3 @@
-#Question 5 Mid 2
-
 ex_ls = [1,2,3,4,5]
 """Remove the LAST item from the list."""
 ex_ls.pop()
