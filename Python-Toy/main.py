@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 
 """Imported all the necessary modules to run the program."""
 
-csvfile = open("/Users/wondamonsta/Downloads/SCDB_2021_01_justiceCentered_Citation.csv", encoding = 'ISO-8859-1')
+csvfile = open("SCDB_2021_01_justiceCentered_Citation.csv", encoding = 'ISO-8859-1')
 
 #Using pandas (pd) to read the file and preparing to exploit csv format
 scdb = pd.read_csv(csvfile)
@@ -23,13 +23,13 @@ SCJsubset = scdb[scdb.term>= 2000]
 
 s = plt.figure(figsize=(10,10))
 SCJsubset.groupby("term")["caseId"].nunique().plot(kind="bar", 
-                                                     title = 'Kiryl Baravikou', color='darkviolet')
+                                                     title = 'User', color='darkviolet')
 
 # 3d question 
 
 s = plt.figure(figsize=(20,20))
 scdb.groupby(['justiceName' , 'direction'])["voteId"].nunique().plot(kind="bar",
-                                                     title = 'Kiryl Baravikou', color='darkviolet')
+                                                     title = 'User', color='darkviolet')
 
 # 4th question 
 
@@ -44,13 +44,13 @@ SCJ_pt2_subset = SCJ_pt2[SCJ_pt2.term >= 2008]
 
 s = plt.figure(figsize=(10,10))
 SCJ_pt2_subset.groupby("caseDisposition")["caseIssuesId"].count().plot(kind="bar", 
-                                                    title = 'Kiryl Baravikou', color='limegreen')
+                                                    title = 'User', color='limegreen')
 
 # 6th question 
 
 s = plt.figure(figsize=(10,10))
 SCJ_pt2_subset.groupby("partyWinning")["caseId"].count().plot(kind="bar", 
-                                                     title = 'Kiryl Baravikou', color='magenta')
+                                                     title = 'User', color='magenta')
 
 #The following plot depicts whether a party has won or not.
 # 0.0 stands for  "The petitioning party received an unfavorable disposition" 
