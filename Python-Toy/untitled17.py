@@ -1,8 +1,3 @@
-#Name: Kiryl Baravikou
-#Course: CS113
-#Date: 3/23/22
-#Project 4
-
 def prod(start, stop):
     """Defining prod() function with two variables 
     'start', 'stop' as input which are integers."""
