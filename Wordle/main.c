@@ -1,17 +1,8 @@
 /*
- CS211
  Program 3: Best Wordle
 
  Created by:
-  Author 1:
     Name:	Kiryl Baravikou
-    NetID:	kbara5
-    UIN:    656339218
-
-  Author 2:
-    Name:	  Avadh Dhaval Patel
-    NetID:	apate552
-    UIN:	  679281704
 
  System:
     System Processor:	Apple M1
