@@ -25,6 +25,9 @@ public class GameInfo implements Serializable{
         curRow = -1;
         curCol = -1;
         gameInfo = "";
+
+        //FIXME: same in the Client => need a method which will be resetting the game stats after its over
+//        GameLogic.resetBoardMatrix(gameBoard);
     }
 
     public void printInfo() {
@@ -39,4 +42,3 @@ public class GameInfo implements Serializable{
         System.out.println("Player Win: " + playerWin);
     }
 }
-
