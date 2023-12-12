@@ -1,0 +1,15 @@
+.button{
+    -fx-font-size: 20px;
+    -fx-font-family: Helvetica Neue;
+    -fx-background-color: #161b22;
+    -fx-background-radius: 10px;
+    -fx-background-insets: 0;
+    -fx-text-fill: #ffffff;
+    -fx-padding: 10px;
+    -fx-border-radius: 10px;
+    -fx-border-color: #ffffff;
+    -fx-border-width: 2px;
+    -fx-border-insets: 0;
+    -fx-effect: dropshadow(three-pass-box, rgb(36, 236, 92), 10, 0, 0, 0);
+
+}

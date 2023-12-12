@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.TextArea?>
+
+
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1"
+            fx:id = "root2" styleClass="border" fx:controller = "Operator">
+    <!-- TODO Add Nodes -->
+    <left>
+        <VBox xmlns:fx="http://javafx.com/fxml/1" styleClass="StackPane" fx:id = "root" spacing="12" >
+
+            <Button fx:id = "CreamButton" text = "Half-n-Half" onAction = "#addCreamButton"/>
+            <Button fx:id = "extraShot" text = "Extra Shot" onAction = "#addExtraShot"/>
+            <Button fx:id = "addToppings" text = "Toppings" onAction = "#addMoreSugar"/>
+            <Button fx:id = "milk" text = "Whole Milk" onAction = "#milkAdded"/>
+            <Button fx:id = "almond" text = "Almond Milk" onAction = "#almondAdded"/>
+            <Button fx:id = "sugar" text = "Sugar" onAction = "#addSugar"/>
+
+                <Button fx:id = "placeOrder" text = "Place Order" onAction = "#coffeeBuilder"/>
+                <Button fx:id = "reset" text = "Reset" onAction = "#cancel"/>
+                <Button fx:id = "exit1" text = "Exit" onAction = "#exit"/>
+        </VBox>
+    </left>
+
+    <top>
+
+        <MenuBar xmlns:fx="http://javafx.com/fxml/1" fx:id = "root3"  maxHeight="5">
+            <menus>
+                <Menu fx:id = "file" text = "Exit">
+                    <items>
+                        <MenuItem fx:id = "close" text = "Quit The Game" onAction = "#exit"/>
+                    </items>
+                </Menu>
+                <Menu fx:id = "help" text = "Help">
+                    <items>
+                        <MenuItem fx:id = "info" text = "Instructions" onAction = "#about"/>
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+
+    </top>
+
+
+    <right>
+        <TextArea xmlns:fx="http://javafx.com/fxml/1" fx:id="customerCopy" styleClass="text-area" text = "Your order includes: &#10;Cozmo's Black Coffee: $3.99" editable = "false"/>
+    </right>
+
+
+</BorderPane>
