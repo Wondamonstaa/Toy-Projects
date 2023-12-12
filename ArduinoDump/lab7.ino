@@ -1,5 +1,5 @@
 /*
-   1- Author: Kiryl Baravikoiu - UIN 656339218
+   1- Author: Kiryl Baravikoiu
 
    2- Lab: Lab 7 - Interrupts 
 
