@@ -7,7 +7,7 @@
 */
 
 /*
-   1- Author: Kiryl Baravikou  - 656339218
+   1- Author: Kiryl Baravikou
    2- Lab: Lab 4 - Multiple Inputs and Outputs 
    3- Description: the following program is supposed to accept multiple inputs and provide multiple outputs, including the sound of the piezzo speaker which reacts to changes in the value of the photoresistor.
    Also, the following code allows to use joystick connected to the bredboard, and based on the joystick's movement the corresponding LEDs on the x and y-axis become bright.
