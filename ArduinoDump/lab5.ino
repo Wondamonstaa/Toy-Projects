@@ -1,5 +1,5 @@
 /*
-   1- Author: Kiryl Baravikou
+   1- Author: Kiryl Baravikou - 656339218
 
    2- Lab: Lab 5 - Communication 
 
@@ -38,7 +38,7 @@
     e. https://www.arduino.cc/reference/en/language/functions/communication/serial/
     f. https://forum.arduino.cc/t/serial-input-basics-updated/382007
 
-   6- Demo: in-person demonstration 3/27/2023 , 1:31 pm to Michael.
+   6- Demo: in-person demonstration 3/27/2023 , 10:42 am to Elijah.
 */
 
 
@@ -176,7 +176,7 @@ void loop() {
 
       //Accept the string from user input from the terminal
       while(Serial.available() == 0){}
-      delay(1500);
+      delay(1200);
       choice = Serial.readStringUntil("\n");
 
       //Using the length, I determine the size of the input word, and, therefore, the further behavior of the program
@@ -196,13 +196,6 @@ void loop() {
         return restart();
       }*/
       
-      //Sanity check for invalid input
-      if(choice.equals("even") == false && choice.equals("odd") == false){
-        Serial.println("Wrong input!");
-        delay(500);
-        return restart();
-      }
-
       Serial.print("I received: ");
       Serial.print(choice);
 
@@ -237,11 +230,8 @@ void loop() {
       //Serial.println(final);
       //Serial.println(choiceLength);
 
-      bool evenChoice = choice.equals("even");
-      bool oddChoice = choice.equals("odd");
-
       //Check if the sum is even (even + terminating characters)
-      if((final % 2 == 0) && evenChoice == true){
+      if((final % 2 == 0) && (choice == "even")){
       //if((final % 2 == 0) && (choiceLength == 6)){
 
           Serial.println();
@@ -257,7 +247,7 @@ void loop() {
           restart();
       }
       //Check if the sum is odd (odd + terminating characters)
-      if((final % 2 != 0) && oddChoice == true){
+      if((final % 2 != 0) && (choice == "odd")){
       //if((final % 2 != 0) && (choiceLength == 5)){
 
           Serial.println();
@@ -273,7 +263,7 @@ void loop() {
           restart();
       }
       //Not even and not odd
-      if((final % 2 == 0) && evenChoice == false){
+      if((final % 2 == 0) && (choice != "even")){
       //if((final % 2 == 0) && (choiceLength != 6)){
 
           Serial.println();
@@ -289,7 +279,7 @@ void loop() {
           restart();
       }
       //Not even and not odd
-      if((final % 2 != 0) && oddChoice == false){
+      if((final % 2 != 0) && (choice != "odd")){
       //if((final % 2 != 0) && (choiceLength != 5)){
 
           Serial.println();
