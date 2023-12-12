@@ -1,6 +1,5 @@
 /*
-   1- Author1: Kiryl Baravikou (as shown in Blackboard) - UIN: 656339218
-    - Author2: bailed on me, so i had to build everything alone: 2 circuits + writing the code for the program :/
+   1- Author1: Kiryl Baravikou
 
    2- Lab: Lab 6 - Serial Communication
 
