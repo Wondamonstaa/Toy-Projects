@@ -1,7 +1,5 @@
 (*
 Name: Kiryl Baravikou
-NetID: kbara5
-UIN: 656339218
 Project description: F# program to input a string and print out information about the # of top 10 letters in that string and substituting certain words
 *)
 
