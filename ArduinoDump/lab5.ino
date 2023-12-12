@@ -1,5 +1,5 @@
 /*
-   1- Author: Kiryl Baravikou - 656339218
+   1- Author: Kiryl Baravikou
 
    2- Lab: Lab 5 - Communication 
 
