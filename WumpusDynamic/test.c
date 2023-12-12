@@ -1,10 +1,7 @@
 /* ---------------------------------------------
 Program 2: Hunt The Wumpus with Dynamic Array
-
-Course: CS 211, Fall 2022. Wed 4pm lab
 System: Mac using Xcode
 Author: Kiryl Baravikou
-Credit for the huge help: Professor Reed, the TAs. Thank you!
 ---------------------------------------------
 */
 
