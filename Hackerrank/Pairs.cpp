@@ -13,7 +13,6 @@ vector<string> split(const string &);
  * The function accepts following parameters:
  *  1. INTEGER k
  *  2. INTEGER_ARRAY arr
-
  */
 
 int pairs(int k, std::vector<int>& arr) {
