@@ -126,3 +126,29 @@ for _ in range(other):
 
 print(sum(a))
 
+#Collections Counter
+from collections import Counter
+
+# Size of each group
+group_size = int(input())
+
+# Unordered elements of the room number list
+room_number_list = input().split(' ')
+
+answer = 0
+
+try:
+    if group_size > 1:
+        
+        counter = Counter(room_number_list)
+        
+        least_common_element, lowest_count = counter.most_common()[-1]
+        
+        answer = least_common_element
+        
+    print(answer)
+    
+except ValueError:
+    
+    print("Size <= 1")
+
