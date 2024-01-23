@@ -152,3 +152,20 @@ except ValueError:
     
     print("Size <= 1")
 
+
+#Is subset test
+test_cases = int(input())
+
+for _ in range(test_cases):
+    
+    num_of_elements_in_A = int(input())
+    a = set(map(int, input().split(' ')))
+
+    num_of_elements_in_B = int(input())
+    b = set(map(int, input().split(' ')))
+    
+    if a.issubset(b):
+        print(True)
+    else:
+        print(False)
+
