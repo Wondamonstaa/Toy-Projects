@@ -19,3 +19,13 @@ sorted_perms = sorted(permutations(string, int(size)))
 for perm in sorted_perms:
     print(''.join(perm))
 
+
+#Combinations
+from itertools import combinations
+
+s, k = input().split()
+letters = sorted(s)
+
+for i in range(1, int(k) + 1):
+    for combination in combinations(letters, i):
+        print("".join(combination))
