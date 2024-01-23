@@ -80,3 +80,20 @@ try:
     
 except ValueError:
     print("Incorrect bounds!")
+
+
+#SYMMETRIC DIFFERENCE
+try:
+
+    a = int(input())
+    if a < 1000:
+        s1 = set(map(int, input().split(' ')))
+    
+    b = int(input())
+    if b < 1000:
+        s2 = set(map(int, input().split(' ')))
+    
+    print(len(s1.symmetric_difference(s2)))
+    
+except ValueError:
+    print("Incorrect bounds!")
