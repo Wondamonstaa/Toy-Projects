@@ -29,3 +29,20 @@ for _ in range(M):
     elif command == "pop":
         S.pop()
 print(sum(S))
+
+
+#Union, intersection, difference
+try:
+    
+    a = int(input())
+    if a < 1000:
+        s1 = set(map(int, input().split(' ')))
+    
+    b = int(input())
+    if b < 1000:
+        s2 = set(map(int, input().split(' ')))
+    
+    print(len(s1.union(s2)))
+    
+except ValueError:
+    print("Incorrect bounds!")
