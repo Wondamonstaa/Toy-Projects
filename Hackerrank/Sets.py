@@ -97,3 +97,32 @@ try:
     
 except ValueError:
     print("Incorrect bounds!")
+
+
+#Combination of set methods 
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+number = int(input())
+
+a = set(map(int, input().split(' ')))
+
+other = int(input())
+
+methods = {
+    "update": "update",
+    "intersection_update": "intersection_update",
+    "difference_update": "difference_update",
+    "symmetric_difference_update": "symmetric_difference_update"
+}
+
+for _ in range(other):
+    
+    head, *tail = input().split(' ')
+    
+    s = set(map(int, input().split(' ')))
+
+    getattr(a, methods[head])(s)
+    
+
+print(sum(a))
+
