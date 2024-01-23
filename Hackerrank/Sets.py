@@ -169,3 +169,17 @@ for _ in range(test_cases):
     else:
         print(False)
 
+#Supersets
+a = set(map(int, input().split(' ')))
+other_sets = int(input())
+
+# Empty set is a superset of all/any sets
+answer = True
+
+for _ in range(other_sets):
+    
+    b = set(map(int, input().split(' ')))
+    
+    answer = answer and a.issuperset(b)
+    
+print(answer)
