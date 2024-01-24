@@ -59,3 +59,26 @@ marks = [int(Names(*list(input().split())).MARKS) for _ in range(N)]
 result = sum(marks) / N
 
 print(result)
+
+
+#Ordered Dictionary
+from collections import OrderedDict
+
+od = OrderedDict()
+
+N = int(input())
+
+for i in range(N):
+    
+    parts = input().split()
+    item_name = ' '.join(parts[:-1])  # Join all elements except the last one as item_name
+    item_price = int(parts[-1])  # The last element is the price
+
+    # If the item_name is already in the dictionary, update the item_price
+    if item_name in od:
+        od[item_name] += item_price
+    else:
+        od[item_name] = item_price
+
+for item_name, item_price in od.items():
+    print(item_name, item_price)
