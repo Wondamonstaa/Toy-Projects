@@ -82,3 +82,27 @@ for i in range(N):
 
 for item_name, item_price in od.items():
     print(item_name, item_price)
+
+#Deque
+from collections import deque
+
+d = deque()
+
+N = int(input())
+
+methods = {
+    "append": "d.append",
+    "pop": "d.pop",
+    "appendleft": "d.appendleft",
+    "popleft": "d.popleft"
+}
+
+for i in range(N):
+    command = input().split()
+    method = command[0]
+    
+    if method in methods:
+        eval(methods[method])(*command[1:])
+
+
+print(*d)
