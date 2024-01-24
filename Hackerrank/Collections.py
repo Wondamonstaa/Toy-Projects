@@ -44,3 +44,18 @@ N = int(input())
 Names = namedtuple('Names', input().split())
 
 print(sum([int(Names(*list(map(str, input().split()))).MARKS) for _ in range(N)])/N)
+
+#Namedtuple detailed
+from collections import namedtuple
+
+N = int(input())
+
+Names = namedtuple('Names', input().split())
+
+#List comprehension: accept items of type string via input, add them to the list, unpack the list, extracts the "MARKS" field from the named tuple and convert it to an integer
+#Finally, iterate within the range N for each student, then calculate the sum of the MARKS column, divide by N, and print the result
+marks = [int(Names(*list(input().split())).MARKS) for _ in range(N)]
+
+result = sum(marks) / N
+
+print(result)
