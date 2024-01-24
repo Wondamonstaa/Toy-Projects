@@ -18,3 +18,21 @@ for i in range(customers):
         counter[size] -= 1  # Decrement the count for the purchased size
 
 print(answer)
+
+#Default dict
+from collections import defaultdict
+N, M = map(int, input().split())
+
+A = [input() for _ in range(N)]
+B = [input() for _ in range(M)]
+
+d = defaultdict(list)
+
+for index, item in enumerate(A):
+    d[item].append(index+1)
+
+for item in B:
+    if item in A:
+        print(*d[item])
+    else:
+        print(-1)
