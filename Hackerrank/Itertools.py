@@ -36,3 +36,19 @@ print("\n".join(["".join(e) for e in cwr(sorted(S), int(k))]))
 for i in range(1, int(k) + 1):
     for combination in combinations(letters, i):
         print("".join(combination))
+
+#Groupby
+from itertools import groupby
+from collections import Counter
+
+string = input()
+
+groups = groupby(string)
+counter = Counter()
+
+result = []
+
+for k, v in groups:
+    result.append((len(list(v)), int(k)))
+
+print(*result)
