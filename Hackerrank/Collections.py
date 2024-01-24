@@ -36,3 +36,11 @@ for item in B:
         print(*d[item])
     else:
         print(-1)
+
+#Namedtuple
+from collections import namedtuple
+
+N = int(input())
+Names = namedtuple('Names', input().split())
+
+print(sum([int(Names(*list(map(str, input().split()))).MARKS) for _ in range(N)])/N)
