@@ -106,3 +106,32 @@ for i in range(N):
 
 
 print(*d)
+
+#Word order
+from collections import Counter
+from collections import OrderedDict
+
+N = int(input())
+words = OrderedDict()
+s = set()
+res = list()
+
+for i in range(N):
+    
+    word_list = input().split()
+    
+    for x in word_list:
+        
+        s.add(x)
+        
+        if x in words:
+            words[x] += 1
+        else:
+            words[x] = 1
+
+
+for k, v in words.items():
+    res.append(v)
+
+print(len(s))
+print(*res)
