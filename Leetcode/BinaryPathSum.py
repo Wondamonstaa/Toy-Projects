@@ -18,7 +18,6 @@ class Solution:
                 return currentSum == targetSum
 
             return dfs(root.left, currentSum) or dfs(root.right, currentSum)
-            
-            return False
         
         return dfs(root, 0)
+        
