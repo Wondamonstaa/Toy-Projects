@@ -17,11 +17,9 @@ class Solution:
 
         if not root.children:
             return 1
-        
-        max_child_depth = max(self.maxDepth(child) for child in root.children)
-        
-        # The depth of the node is 1 (itself) plus the maximum depth among its children
-        return 1 + max_child_depth
 
+        max_depth = max(self.maxDepth(child) for child in root.children)
+
+        return 1 + max_depth
             
             
