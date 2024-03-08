@@ -7,18 +7,31 @@ class TreeNode:
 class Solution:
     def binaryTreePaths(self, root: Optional[TreeNode]) -> List[str]:
         
-        def dfs(node, path, paths):
+        paths: List[str] = list()
+
+        def dfs(node: Optional[TreeNode], path: str, paths: List[str]) -> None:
+
             if node:
+                
+                # Obtain a value => add to the string
                 newPath = path + str(node.val)
-                # If it's a leaf node, append the path to the list of paths
+
+                # No more leaves
                 if not node.left and not node.right:
+                    
+                    # New path discovered
                     paths.append(newPath)
+
                 else:
-                    # Continue the depth-first search on both children
+
                     dfs(node.left, newPath + "->", paths)
                     dfs(node.right, newPath + "->", paths)
-        
-        paths = []
+
         dfs(root, "", paths)
 
         return paths
+
+
+
+
+
