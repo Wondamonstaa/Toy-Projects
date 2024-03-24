@@ -32,7 +32,7 @@ export const fetchLukeSkywalker = async () => {
 
 // Third Option
 export const fetchLukeSkywalker = async () => {
-  const data = await fetch("https://swapi.dev/api/people/1").then((res) => {
+  const data: any = await fetch("https://swapi.dev/api/people/1").then((res) => {
     return res.json();
   });
 
