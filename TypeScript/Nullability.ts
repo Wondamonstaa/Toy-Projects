@@ -1,7 +1,7 @@
 const searchParams = new URLSearchParams(window.location.search);
 
 const id: string | null = searchParams.get("id");
-console.log(id?.toUpperCase())
+console.log(id?.toUpperCase()) //Optional chaining => "?."
 
 //OR
 //console.log(id!.toUpperCase())
