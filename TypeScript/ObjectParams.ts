@@ -3,7 +3,7 @@ import { expect, it } from "vitest";
 type Object = {
   first: number
   second: number
-}
+};
 
 
 export const addTwoNumbers = (params: Object) => {
