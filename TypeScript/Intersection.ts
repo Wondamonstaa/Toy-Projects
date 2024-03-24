@@ -10,11 +10,33 @@ interface Post {
   body: string;
 }
 
+type UserAndPosts = User & {posts: Post[]} & {
+  firstName: string;
+  lastName: string;
+  posts: Post[];
+};
+
 /**
  * How do we type this return statement so it's both
  * User AND { posts: Post[] }
  */
-export const getDefaultUserAndPosts = (): User & {posts: Post[]} => {
+/*export const getDefaultUserAndPosts = (): User & {posts: Post[]} => {
+  return {
+    id: "1",
+    firstName: "Matt",
+    lastName: "Pocock",
+    posts: [
+      {
+        id: "1",
+        title: "How I eat so much cheese",
+        body: "It's pretty edam difficult",
+      },
+    ],
+  };
+};*/
+
+// Option 2
+export const getDefaultUserAndPosts = (): UserAndPosts => {
   return {
     id: "1",
     firstName: "Matt",
@@ -32,3 +54,4 @@ export const getDefaultUserAndPosts = (): User & {posts: Post[]} => {
 const userAndPosts = getDefaultUserAndPosts();
 
 console.log(userAndPosts.posts[0]);
+
