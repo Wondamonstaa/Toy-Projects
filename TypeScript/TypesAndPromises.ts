@@ -6,9 +6,16 @@ interface User {
   lastName: string;
 }
 
+// Can extract types here, and then use them
+// Need Promises because we use async functions
+type GetUser = (id: string) => Promise<User>;
+type CreateUser = () => Promise<string>;
+
 const createThenGetUser = async (
-  createUser: () => Promise<string>,
-  getUser: (id: string) => Promise<User>,
+  //createUser: () => Promise<string>,
+  createUser: CreateUser,
+  //getUser: (id: string) => Promise<User>,
+  getUser: GetUser,
 ): Promise<User> => {
   const userId: string = await createUser();
 
