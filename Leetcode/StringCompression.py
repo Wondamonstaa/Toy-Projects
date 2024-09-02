@@ -2,6 +2,10 @@ class Solution:
     def compress(self, chars: List[str]) -> int:
         write = anchor = 0
         for read, char in enumerate(chars):
+            '''
+            The condition checks if the current character is the last in the list or if the next character is different from the current one. 
+            This means the current group of identical characters is ending.
+            '''
             if read + 1 == len(chars) or chars[read + 1] != char:
                 chars[write] = chars[anchor]
                 write += 1
