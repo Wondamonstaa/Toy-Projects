@@ -1,19 +1,35 @@
 class Solution:
     def compress(self, chars: List[str]) -> int:
-        write = anchor = 0
-        for read, char in enumerate(chars):
-            '''
-            The condition checks if the current character is the last in the list or if the next character is different from the current one. 
-            This means the current group of identical characters is ending.
-            '''
-            if read + 1 == len(chars) or chars[read + 1] != char:
+        
+        #write = anchor = 0
+        write = 0
+        anchor = 0
+
+        #O(N)
+        for cur_idx, char in enumerate(chars):
+
+            #O(1)
+            if cur_idx + 1 == len(chars) or chars[cur_idx + 1] != char:
+                ''' 
+                The character at the anchor index 
+                (which is the start of the sequence) is written to the write position in the array.
+                The write pointer is then incremented to the next position.
+                '''
+                #O(1)
                 chars[write] = chars[anchor]
                 write += 1
-                if read > anchor:
-                    for digit in str(read - anchor + 1):
+
+                #O(1)
+                if cur_idx > anchor:
+                    #O(log10(n)) -> ~O(N)
+                    for digit in str(cur_idx - anchor + 1):
+                        #O(1)
                         chars[write] = digit
                         write += 1
-                anchor = read + 1
+                anchor = cur_idx + 1
+
+        #Time complexity: O(N) = 2*O(N) + 4*O(1) = 2*O(N) = O(N)
+        #Space complexity: O(1) since the algorithm uses a constant amount of extra space regardless of the size of the input chars array.
         return write
 
 
