@@ -23,14 +23,15 @@ class Solution:
                 if cur_idx > anchor:
                     #O(log10(n)) -> ~O(N)
                     for digit in str(cur_idx - anchor + 1):
-                        #O(1)
+                        #O(1) 
                         chars[write] = digit
                         write += 1
                 anchor = cur_idx + 1
 
-        #Time complexity: O(N) = 2*O(N) + 4*O(1) = 2*O(N) = O(N)
+        #Time complexity: O(N) = 2*O(N) + 4*O(1) = 2*O(N) = ~O(N)
         #Space complexity: O(1) since the algorithm uses a constant amount of extra space regardless of the size of the input chars array.
         return write
+
 
 
 class Solution:
