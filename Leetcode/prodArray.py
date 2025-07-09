@@ -22,3 +22,25 @@ class Solution:
       
         result = left * right
         return result.tolist()
+
+import numpy as np
+from typing import List
+
+class Solution:
+    def productExceptSelf(self, nums: List[int]) -> List[int]:
+
+        if not nums:
+            return []
+
+        n = len(nums)
+        arr = np.array(nums)
+        
+        left, right = np.empty(n, dtype=int), np.empty(n, dtype=int)
+        left[0], right[-1] = 1, 1
+
+        left[1:] = np.cumprod(arr[:-1])
+        right[:-1] = np.cumprod(arr[::-1][:-1])[::-1]
+        
+        result = left * right
+
+        return result.tolist()
