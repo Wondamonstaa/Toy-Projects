@@ -1,11 +1,14 @@
 class Solution:
     def longestSubarray(self, nums: List[int]) -> int:
+        
+        if sum(nums) == len(nums):
+            return len(nums) - 1
+
         left = 0
         zero_count = 0
         max_len = 0
 
         for right in range(len(nums)):
-            
             ''' 
             [1,1,0,1]
             nums[0] == 1: zero_count = 0
