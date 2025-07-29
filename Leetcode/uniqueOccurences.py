@@ -13,3 +13,8 @@ class Solution:
                 return False
 
         return True
+
+# Option 2, if you want
+def uniqueOccurrences(self, arr: List[int]) -> bool:
+    counts = Counter(arr).values()
+    return len(counts) == len(set(counts))
