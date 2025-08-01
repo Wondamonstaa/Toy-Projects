@@ -60,10 +60,15 @@ class GeoAlertSystem:
         """Returns a list of zone names this user triggered."""
         zones = set()
 
-        for uid, data in self.visits.items():
-            for lat1, lon1, ts, trigger in data:
-                if uid == user_id:
-                    zones.add(trigger)
+        # O(V*N)
+        # for uid, data in self.visits.items():
+        #     for lat1, lon1, ts, trigger in data:
+        #         if uid == user_id:
+        #             zones.add(trigger)
+
+        # Optimization: O(V), where V is the number of visits per user
+        for lat1, lon1, ts, trigger in self.visits[user_id]:
+            zones.add(trigger)
 
         return list(zones)
 
